@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "ms-graph-solutions-client-side-solution",
+    "id": "9fb25719-55b7-499f-a7ec-7dadaced0ec8",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "webApiPermissionRequests": [
+      // {
+      //   "resource": "Microsoft Graph",
+      //   "scope": "User.ReadBasic.All"
+      // }
+      {
+         "resource": "Microsoft.Azure.AgregatorService",
+         "scope": "User.ReadBasic.All"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/ms-graph-solutions.sppkg"
+  }
+}
