@@ -26,31 +26,32 @@ let _usersListColumns = [
     minWidth: 50,
     maxWidth: 100,
     isResizable: true
-  },
-  {
-    key: 'mail',
-    name: 'Mail',
-    fieldName: 'mail',
-    minWidth: 50,
-    maxWidth: 100,
-    isResizable: true
-  },
-  {
-    key: 'userPrincipalName',
-    name: 'User Principal Name',
-    fieldName: 'userPrincipalName',
-    minWidth: 100,
-    maxWidth: 200,
-    isResizable: true
-  },
+  }
+  // {
+  //   key: 'email',
+  //   name: 'email',
+  //   fieldName: 'email',
+  //   minWidth: 50,
+  //   maxWidth: 100,
+  //   isResizable: true
+  // },
+  // {
+  //   key: 'userPrincipalName',
+  //   name: 'User Principal Name',
+  //   fieldName: 'userPrincipalName',
+  //   minWidth: 100,
+  //   maxWidth: 200,
+  //   isResizable: true
+  // },
 ];
 
 export default class MsGraphConnectionSample extends React.Component<IMsGraphConnectionSampleProps, IMsGraphConnectionSampleState> {
   constructor(props:IMsGraphConnectionSampleProps,sttate:IMsGraphConnectionSampleState){
     super(props);
-    this.setState({
+
+    this.state = {
       users:[]
-    });
+    };
   }
   public render(): React.ReactElement<IMsGraphConnectionSampleProps> {
 
@@ -65,13 +66,6 @@ export default class MsGraphConnectionSample extends React.Component<IMsGraphCon
               <a href="https://aka.ms/spfx" className={ styles.button }>
                 <span className={ styles.label }>Learn more</span>
               </a>
-              <p>
-              <PrimaryButton
-                    text='Search'
-                    title='Search'
-                    onClick={ this.SampleClick }
-                  />
-              </p>
               <p>
               <PrimaryButton
                     text='Get Details'
@@ -89,7 +83,7 @@ export default class MsGraphConnectionSample extends React.Component<IMsGraphCon
                     checkboxVisibility={ CheckboxVisibility.hidden }
                     selectionMode={ SelectionMode.none }
                     layoutMode={ DetailsListLayoutMode.fixedColumns }
-                    compact={ true }
+                    compact={ false }
                   />
                 </p>
                 : null
